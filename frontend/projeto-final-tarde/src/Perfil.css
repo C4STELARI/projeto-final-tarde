@@ -1,0 +1,542 @@
+.profile-app {
+  min-height: 100vh;
+  background: #fff;
+}
+
+.profile-sidebar {
+  position: fixed;
+  inset: 0 auto 0 0;
+  z-index: 5;
+  display: flex;
+  width: 245px;
+  flex-direction: column;
+  padding: 34px 14px 22px;
+  border-right: 1px solid #dbdbdb;
+  background: #fff;
+}
+
+.profile-wordmark {
+  width: fit-content;
+  margin: 0 0 42px 12px;
+  color: #171717;
+  font-family: 'Grand Hotel', cursive;
+  font-size: 34px;
+  line-height: 1;
+  text-decoration: none;
+}
+
+.profile-navigation {
+  display: grid;
+  gap: 8px;
+}
+
+.profile-navigation a,
+.profile-account {
+  display: flex;
+  min-height: 50px;
+  align-items: center;
+  gap: 15px;
+  padding: 0 12px;
+  border-radius: 8px;
+  color: #171717;
+  font-size: 15px;
+  text-decoration: none;
+}
+
+.profile-navigation a:hover,
+.profile-account:hover {
+  background: #f5f5f5;
+  color: #171717;
+}
+
+.profile-navigation a.active {
+  font-weight: 700;
+}
+
+.profile-navigation a span {
+  width: 25px;
+  font-size: 24px;
+  line-height: 1;
+  text-align: center;
+}
+
+.profile-account {
+  margin-top: auto;
+}
+
+.profile-account img {
+  width: 25px;
+  height: 25px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+.profile-main {
+  min-height: 100vh;
+  margin-left: 245px;
+  padding: 30px 28px 60px;
+}
+
+.profile-mobile-nav {
+  display: none;
+}
+
+.profile-page {
+  width: min(100%, 940px);
+  margin: 0 auto;
+}
+
+.profile-header {
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  align-items: start;
+  gap: 30px;
+  padding: 20px 4% 42px;
+}
+
+.profile-avatar {
+  width: 150px;
+  height: 150px;
+  justify-self: center;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+.profile-details {
+  display: grid;
+  gap: 22px;
+}
+
+.profile-title {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.profile-title h1 {
+  margin: 0 14px 0 0;
+  font-size: 20px;
+  font-weight: 400;
+}
+
+.profile-follow,
+.profile-message {
+  min-height: 32px;
+  padding: 0 16px;
+  border: 0;
+  border-radius: 8px;
+  background: #0095f6;
+  color: #fff;
+  cursor: pointer;
+  font-size: 13px;
+  font-weight: 600;
+}
+
+.profile-follow.following,
+.profile-message {
+  background: #efefef;
+  color: #262626;
+}
+
+.profile-message {
+  display: inline-flex;
+  align-items: center;
+  text-decoration: none;
+}
+
+.profile-upload-section {
+  margin: 0 0 24px;
+  padding: 18px;
+  border: 1px solid #dbdbdb;
+  border-radius: 8px;
+}
+
+.profile-upload-section h2 {
+  margin: 0 0 14px;
+  font-size: 16px;
+  font-weight: 600;
+}
+
+.profile-upload-form {
+  display: grid;
+  gap: 12px;
+}
+
+.profile-file-field,
+.profile-caption-field {
+  display: grid;
+  gap: 6px;
+  color: #737373;
+  font-size: 12px;
+}
+
+.profile-file-field input,
+.profile-caption-field textarea {
+  width: 100%;
+  padding: 9px;
+  border: 1px solid #dbdbdb;
+  border-radius: 6px;
+  background: #fff;
+  color: #262626;
+  font-size: 13px;
+}
+
+.profile-publish {
+  justify-self: start;
+  min-height: 34px;
+  padding: 0 18px;
+  border: 0;
+  border-radius: 7px;
+  background: #0095f6;
+  color: #fff;
+  cursor: pointer;
+  font-size: 13px;
+  font-weight: 600;
+}
+
+.profile-publish:disabled {
+  cursor: wait;
+  opacity: 0.65;
+}
+
+.selected-file {
+  margin: -4px 0 0;
+  color: #262626;
+  font-size: 12px;
+}
+
+.profile-status {
+  margin: 14px 0;
+  color: #737373;
+  font-size: 13px;
+}
+
+.profile-status.error {
+  color: #c62828;
+}
+
+.profile-status.success {
+  color: #16834b;
+}
+
+.profile-options {
+  padding: 0 4px;
+  border: 0;
+  background: transparent;
+  font-size: 19px;
+  font-weight: 700;
+}
+
+.profile-stats {
+  display: flex;
+  gap: 38px;
+  font-size: 15px;
+}
+
+.profile-stats strong {
+  font-weight: 700;
+}
+
+.profile-bio {
+  font-size: 14px;
+  line-height: 1.6;
+}
+
+.profile-bio p {
+  margin: 2px 0;
+}
+
+.profile-bio a {
+  color: #00376b;
+  font-weight: 600;
+  text-decoration: none;
+}
+
+.profile-highlights {
+  display: flex;
+  gap: 44px;
+  padding: 8px 5% 42px;
+}
+
+.highlight {
+  display: grid;
+  justify-items: center;
+  gap: 10px;
+  border: 0;
+  background: transparent;
+  color: #262626;
+  cursor: pointer;
+}
+
+.highlight > span {
+  display: grid;
+  width: 88px;
+  height: 88px;
+  place-items: center;
+  border: 1px solid #dbdbdb;
+  border-radius: 50%;
+}
+
+.highlight img {
+  width: 78px;
+  height: 78px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+.highlight small {
+  font-size: 12px;
+  font-weight: 600;
+}
+
+.profile-tabs {
+  display: flex;
+  justify-content: center;
+  gap: 56px;
+  border-top: 1px solid #dbdbdb;
+}
+
+.profile-tabs button {
+  display: flex;
+  min-height: 52px;
+  align-items: center;
+  gap: 7px;
+  margin-top: -1px;
+  border: 0;
+  border-top: 1px solid transparent;
+  background: transparent;
+  color: #737373;
+  cursor: pointer;
+  font-size: 11px;
+  font-weight: 600;
+  letter-spacing: 1px;
+}
+
+.profile-tabs button.selected {
+  border-top-color: #262626;
+  color: #262626;
+}
+
+.profile-tabs button span {
+  font-size: 16px;
+}
+
+.profile-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 4px;
+}
+
+.profile-grid-item {
+  position: relative;
+  overflow: hidden;
+  aspect-ratio: 1 / 1;
+  padding: 0;
+  border: 0;
+  background: #efefef;
+  cursor: pointer;
+}
+
+.profile-grid-item img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: filter 150ms ease;
+}
+
+.profile-grid-item span {
+  position: absolute;
+  inset: 0;
+  display: grid;
+  place-content: center;
+  background: rgb(0 0 0 / 38%);
+  color: #fff;
+  font-size: 14px;
+  font-weight: 700;
+  opacity: 0;
+  transition: opacity 150ms ease;
+}
+
+.profile-grid-item:hover span {
+  opacity: 1;
+}
+
+.empty-tagged {
+  display: grid;
+  min-height: 260px;
+  justify-items: center;
+  align-content: center;
+  text-align: center;
+}
+
+.empty-tagged > span {
+  display: grid;
+  width: 60px;
+  height: 60px;
+  margin-bottom: 14px;
+  place-items: center;
+  border: 2px solid #262626;
+  border-radius: 50%;
+  font-size: 30px;
+}
+
+.empty-tagged h2 {
+  margin: 0 0 8px;
+  font-size: 24px;
+}
+
+.empty-tagged p {
+  color: #737373;
+  font-size: 14px;
+}
+
+@media (max-width: 760px) {
+  .profile-sidebar {
+    position: sticky;
+    inset: 0 0 auto;
+    width: 100%;
+    height: 58px;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 18px;
+    border-right: 0;
+    border-bottom: 1px solid #dbdbdb;
+  }
+
+  .profile-wordmark {
+    margin: 0;
+    font-size: 30px;
+  }
+
+  .profile-navigation,
+  .profile-account {
+    display: none;
+  }
+
+  .profile-main {
+    min-height: calc(100vh - 58px);
+    margin-left: 0;
+    padding: 16px 0 76px;
+  }
+
+  .profile-mobile-nav {
+    position: fixed;
+    inset: auto 0 0;
+    z-index: 5;
+    display: flex;
+    height: 56px;
+    align-items: center;
+    justify-content: space-around;
+    border-top: 1px solid #dbdbdb;
+    background: #fff;
+  }
+
+  .profile-mobile-nav a {
+    color: #171717;
+    font-size: 27px;
+    line-height: 1;
+    text-decoration: none;
+  }
+
+  .profile-mobile-nav a.active {
+    font-weight: 700;
+  }
+
+  .profile-header {
+    grid-template-columns: 90px 1fr;
+    gap: 16px;
+    padding: 18px 16px 26px;
+  }
+
+  .profile-avatar {
+    width: 77px;
+    height: 77px;
+  }
+
+  .profile-details {
+    gap: 16px;
+  }
+
+  .profile-title {
+    flex-wrap: wrap;
+    gap: 6px;
+  }
+
+  .profile-title h1 {
+    width: 100%;
+    margin: 0 0 2px;
+  }
+
+  .profile-follow,
+  .profile-message {
+    min-height: 30px;
+    padding: 0 12px;
+    font-size: 12px;
+  }
+
+  .profile-options {
+    display: none;
+  }
+
+  .profile-stats {
+    position: absolute;
+    top: 135px;
+    right: 0;
+    left: 0;
+    justify-content: space-around;
+    gap: 0;
+    padding: 12px 5px;
+    border-top: 1px solid #efefef;
+    border-bottom: 1px solid #efefef;
+    font-size: 12px;
+  }
+
+  .profile-bio {
+    grid-column: 1 / -1;
+    margin-top: 43px;
+    font-size: 13px;
+  }
+
+  .profile-highlights {
+    gap: 24px;
+    padding: 8px 16px 26px;
+    overflow-x: auto;
+  }
+
+  .highlight {
+    min-width: 66px;
+    padding: 0;
+  }
+
+  .highlight > span {
+    width: 66px;
+    height: 66px;
+  }
+
+  .highlight img {
+    width: 58px;
+    height: 58px;
+  }
+
+  .profile-tabs {
+    gap: 0;
+    justify-content: space-around;
+  }
+
+  .profile-tabs button {
+    justify-content: center;
+    flex: 1;
+    min-height: 46px;
+    font-size: 0;
+  }
+
+  .profile-tabs button span {
+    font-size: 20px;
+  }
+
+  .profile-grid {
+    gap: 2px;
+  }
+}

@@ -1,0 +1,271 @@
+.settings-app {
+  min-height: 100vh;
+  background: #fff;
+}
+
+.settings-sidebar {
+  position: fixed;
+  inset: 0 auto 0 0;
+  z-index: 5;
+  display: flex;
+  width: 245px;
+  flex-direction: column;
+  padding: 34px 14px 22px;
+  border-right: 1px solid #dbdbdb;
+  background: #fff;
+}
+
+.settings-wordmark {
+  width: fit-content;
+  margin: 0 0 42px 12px;
+  color: #171717;
+  font-family: 'Grand Hotel', cursive;
+  font-size: 34px;
+  line-height: 1;
+  text-decoration: none;
+}
+
+.settings-navigation {
+  display: grid;
+  gap: 8px;
+}
+
+.settings-navigation a,
+.settings-account {
+  display: flex;
+  min-height: 50px;
+  align-items: center;
+  gap: 15px;
+  padding: 0 12px;
+  border-radius: 8px;
+  color: #171717;
+  font-size: 15px;
+  text-decoration: none;
+}
+
+.settings-navigation a:hover,
+.settings-account:hover {
+  background: #f5f5f5;
+  color: #171717;
+}
+
+.settings-navigation a.active {
+  font-weight: 700;
+}
+
+.settings-navigation a span {
+  width: 25px;
+  font-size: 24px;
+  line-height: 1;
+  text-align: center;
+}
+
+.settings-account {
+  margin-top: auto;
+}
+
+.settings-account img {
+  width: 25px;
+  height: 25px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+.settings-main {
+  min-height: 100vh;
+  margin-left: 245px;
+  padding: 48px 32px;
+}
+
+.settings-page {
+  width: min(100%, 700px);
+  margin: 0 auto;
+}
+
+.settings-page h1 {
+  margin: 0 0 28px;
+  font-size: 24px;
+  font-weight: 600;
+}
+
+.settings-panel {
+  margin-bottom: 20px;
+  padding: 24px;
+  border: 1px solid #dbdbdb;
+  border-radius: 8px;
+}
+
+.settings-panel h2 {
+  margin: 0 0 12px;
+  font-size: 16px;
+  font-weight: 600;
+}
+
+.settings-field {
+  display: grid;
+  gap: 7px;
+  margin-top: 16px;
+  color: #737373;
+  font-size: 13px;
+}
+
+.settings-field input,
+.settings-field textarea {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #dbdbdb;
+  border-radius: 6px;
+  color: #262626;
+  font-size: 14px;
+  resize: vertical;
+}
+
+.setting-row {
+  display: flex;
+  min-height: 72px;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+  border-top: 1px solid #efefef;
+  cursor: pointer;
+}
+
+.setting-row > span {
+  display: grid;
+  gap: 5px;
+  font-size: 14px;
+}
+
+.setting-row small {
+  color: #737373;
+  font-size: 12px;
+}
+
+.setting-row input {
+  width: 38px;
+  height: 20px;
+  accent-color: #0095f6;
+  cursor: pointer;
+}
+
+.settings-link {
+  display: flex;
+  min-height: 48px;
+  align-items: center;
+  justify-content: space-between;
+  border-top: 1px solid #efefef;
+  color: #262626;
+  font-size: 14px;
+  text-decoration: none;
+}
+
+.settings-link span {
+  color: #737373;
+  font-size: 24px;
+}
+
+.settings-logout {
+  display: inline-block;
+  margin-top: 16px;
+  padding: 0;
+  border: 0;
+  background: transparent;
+  color: #ed4956;
+  cursor: pointer;
+  font-size: 14px;
+  font-weight: 600;
+}
+
+.settings-demo-note {
+  color: #737373;
+  font-size: 12px;
+}
+
+.settings-save {
+  min-height: 36px;
+  margin: 0 0 24px;
+  padding: 0 18px;
+  border: 0;
+  border-radius: 7px;
+  background: #0095f6;
+  color: #fff;
+  cursor: pointer;
+  font-size: 13px;
+  font-weight: 600;
+}
+
+.settings-save:disabled {
+  cursor: wait;
+  opacity: 0.65;
+}
+
+.settings-message {
+  margin-bottom: 16px;
+  font-size: 13px;
+}
+
+.settings-message.error {
+  color: #c62828;
+}
+
+.settings-message.success {
+  color: #16834b;
+}
+
+.settings-mobile-nav {
+  display: none;
+}
+
+@media (max-width: 760px) {
+  .settings-sidebar {
+    position: sticky;
+    inset: 0 0 auto;
+    width: 100%;
+    height: 58px;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 18px;
+    border-right: 0;
+    border-bottom: 1px solid #dbdbdb;
+  }
+
+  .settings-wordmark {
+    margin: 0;
+    font-size: 30px;
+  }
+
+  .settings-navigation,
+  .settings-account {
+    display: none;
+  }
+
+  .settings-main {
+    min-height: calc(100vh - 58px);
+    margin: 0;
+    padding: 28px 16px 76px;
+  }
+
+  .settings-mobile-nav {
+    position: fixed;
+    inset: auto 0 0;
+    z-index: 5;
+    display: flex;
+    height: 56px;
+    align-items: center;
+    justify-content: space-around;
+    border-top: 1px solid #dbdbdb;
+    background: #fff;
+  }
+
+  .settings-mobile-nav a {
+    color: #171717;
+    font-size: 27px;
+    line-height: 1;
+    text-decoration: none;
+  }
+
+  .settings-mobile-nav a.active {
+    font-weight: 700;
+  }
+}
